@@ -1,0 +1,14 @@
+# Don't track content of these folders
+project/project/
+project/target/
+target/streams/
+target/scala-2.11/node_modules/
+target/scala-2.11/resolution-cache/
+target/scala-2.11/classes/
+
+# Compiled source #
+###################
+*.history
+*.Rhistory
+*.js
+*.js.map

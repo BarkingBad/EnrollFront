@@ -1,0 +1,9 @@
+{
+  "server": {
+    "baseDir": "/home/andrzej/Dokumenty/Scala/frontend/target/scala-2.11",
+    "index": "index-fastopt.html",
+    "routes": {
+      "/node_modules/": "/home/andrzej/Dokumenty/Scala/frontend/node_modules"
+    }
+  }
+}

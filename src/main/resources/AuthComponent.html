@@ -1,0 +1,10 @@
+<div class="container">
+    <form (ngSubmit)="submit()" #auth="ngForm">
+        <div class="form-group">
+            <h1>Podaj indeks do zalogowania</h1>
+            <input  type="text" class="form-control" id="index" required>
+        </div>
+
+        <button type="submit" class="btn btn-success" [disabled]="!auth.form.valid">Zaloguj!</button>
+    </form>
+</div>

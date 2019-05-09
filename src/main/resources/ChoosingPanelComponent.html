@@ -1,0 +1,26 @@
+<div class="container">
+    <form>
+        <div class="form-group">
+            <input type="text" class="form-control" id="name" required>
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" id="surname" required>
+        </div>
+        <div class="form-group">
+            <select class="form-control" id="subject1" required>
+            <option *ngFor="let course of filterOnId(this.subjectsForm.controls['subject3'].value, this.subjectsForm.controls['subject2'].value)" [value]="course.Id">{{course.Name}}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <select class="form-control" id="subject1" required>
+            <option *ngFor="let course of filterOnId(this.subjectsForm.controls['subject3'].value, this.subjectsForm.controls['subject2'].value)" [value]="course.Id">{{course.Name}}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <select class="form-control" id="subject1" required>
+            <option *ngFor="let course of filterOnId(this.subjectsForm.controls['subject3'].value, this.subjectsForm.controls['subject2'].value)" [value]="course.Id">{{course.Name}}</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-success">Wyślij wyniki!</button>
+    </form>
+</div>
