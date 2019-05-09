@@ -22,16 +22,15 @@ class HttpService(http: Http) {
   }
 
   def getForm(): RxPromise[js.Array[Course]] = {
-    // tslint:disable-next-line:max-line-length
-    return this.http.get<Odata>(this.odDashDetailUrl + `?$top=${top}&$skip=${top * skip}&$inlinecount=allpages&$orderby=${active} ${direction}`);
+    // http.get(odDashDetailUrl + `?$top=${top}&$skip=${top * skip}&$inlinecount=allpages&$orderby=${active} ${direction}`);
   }
 
-  def delete(id: number): RxPromise[js.Any] = {
-    return this.http.delete(this.formUrl + "/" + `${id}` );
+  def delete(id: Int): RxPromise[js.Any] = {
+    http.delete(formsUrl + "/" + s"$id" ).toPromise;
   }
 
-  def patch(id: number, form: any): RxPromise[js.Any] = {
-    return this.http.patch(this.odFormUrl + "/" + `(${id})`,  form, httpOptions);
+  def patch(id: Int, form: js.Any): RxPromise[js.Any] = {
+    http.patch(formsUrl + "/" + s"$id").toPromise;
   }
 
   private def handleError(error: js.Any) = js.Dynamic.global.console.log(error)

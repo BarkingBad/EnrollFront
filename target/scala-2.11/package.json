@@ -1,15 +1,9 @@
 {
-  "name": "angulate2-examples-heroes",
-  "version": "0.1.0",
+  "name": "angulate2_systemjs_liteserver",
+  "version": "0.0.1",
   "scripts": {
     "start": "lite-server"
   },
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "https://github.com/jokade/angulate2-quickstart/blob/master/LICENSE"
-    }
-  ],
   "dependencies": {
     "@angular/common": "~2.4.0",
     "@angular/compiler": "~2.4.0",
