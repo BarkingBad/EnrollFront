@@ -2,17 +2,17 @@
 <table class="table table-striped">
     <thead>
     <tr>
-      <th *ngFor="let head of headElements" scope="col">{{head}}</th>
+        <th *ngFor="let head of headElements" scope="col">{{head}}</th>
     </tr>
     </thead>
     <tbody>
-    <tr >
-      <td *ngFor="let form of forms">{{ form.id }}</td>
-      <td *ngFor="let form of forms">{{ form.name }}</td>
-      <td *ngFor="let form of forms">{{ form.surname }}</td>
-      <td *ngFor="let form of forms">{{ form.course1 }}</td>
-      <td *ngFor="let form of forms">{{ form.course2 }}</td>
-      <td *ngFor="let form of forms">{{ form.course3 }}</td>
+    <tr *ngFor="let form of forms" [routerLink]="['/dashboard', form.id]" [id]="form.id">
+        <th scope="col">{{form.id}}</th>
+        <td>{{ form.name }}</td>
+        <td>{{ form.surname }}</td>
+        <td>{{ form.course1 }}</td>
+        <td>{{ form.course2 }}</td>
+        <td>{{ form.course3 }}</td>
     </tr>
     </tbody>
-  </table>
+</table>

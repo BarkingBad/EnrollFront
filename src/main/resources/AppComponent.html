@@ -7,10 +7,10 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
         <li class="nav-item">
-            <a class="nav-link" (click)="redirect('f')" style="cursor: pointer;">Form</a>
+            <a class="nav-link" [routerLink]="['/panel']" style="cursor: pointer;">Form</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" (click)="redirect('d')" style="cursor: pointer;">Dashboard</a>
+            <a class="nav-link" [routerLink]="['/dashboard']" style="cursor: pointer;">Dashboard</a>
         </li>
         </ul>
     </div>

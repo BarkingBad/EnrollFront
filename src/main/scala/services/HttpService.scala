@@ -1,37 +1,50 @@
+package services
+
 import angulate2.std._
+
 import scala.scalajs.js
-import angulate2.core.Injectable
-import angualte2.http.Http
+import angulate2.http._
+import models._
 import rxjs.RxPromise
+import rxjs._
 
 @Injectable
 class HttpService(http: Http) {
-  val coursesUrl = "http://localhost:49902/api/coursesdb";
-  val formsUrl = "http://localhost:49902/api/formsdb";
+  val coursesUrl = "http://localhost:9000/courses/"
+  val formsUrl = "http://localhost:9000/forms"
+  val dashDetailsUrl = "http://localhost:9000/dashdetails"
+
+  val httpOptions = RequestOptionsArgs(
+    headers = new Headers(js.Dynamic.literal(
+      "Content-Type" -> "application/json",
+      "Accept" -> "my-auth-token")
+    )
+  )
 
   def getCourses(): RxPromise[js.Array[Course]] = {
-    http.get(coursesUrl).toPromise.map(_.jsonData[js.Array[Course]])
+
+    http.get(coursesUrl + "/all").toPromise.map(_.jsonData[js.Array[Course]])
   }
 
-  def getDashDetailById(id: Int): RxPromise[Course] = {
-    getCourses map _.find(_.id == id).get
+  def getDashDetailById(id: Int): RxPromise[DashDetail] = {
+    http.get(dashDetailsUrl + s"/$id").toPromise.map(_.jsonData[DashDetail])
   }
 
-  def postForm(form: Form): RxPromise[Course] = {
-    http.postJson(formsUrl, JSON.stringify(form)).toPromise.map(_.jsonData[Form]).onError(handleError _);
+  def postForm(form: Form): RxPromise[Form] = {
+    http.postJson(formsUrl, form).toPromise.map(_.jsonData[Form])
   }
 
-  def getForm(): RxPromise[js.Array[Course]] = {
-    // http.get(odDashDetailUrl + `?$top=${top}&$skip=${top * skip}&$inlinecount=allpages&$orderby=${active} ${direction}`);
+  def getFormById(id: Int): RxPromise[Form] = {
+    http.get(formsUrl + s"/$id").toPromise.map(_.jsonData[Form])
   }
 
-  def delete(id: Int): RxPromise[js.Any] = {
-    http.delete(formsUrl + "/" + s"$id" ).toPromise;
+  def deleteForm(id: Int): RxPromise[Unit] = {
+    http.delete(formsUrl + "/" + s"$id").toPromise.map(_ => ())
   }
 
-  def patch(id: Int, form: js.Any): RxPromise[js.Any] = {
-    http.patch(formsUrl + "/" + s"$id").toPromise;
-  }
+  // def patch(id: Int, form: js.Any): Observable[js.Any] = {
+  //   http.patch(formsUrl + "/" + s"$id").toPromise
+  // }
 
   private def handleError(error: js.Any) = js.Dynamic.global.console.log(error)
 }

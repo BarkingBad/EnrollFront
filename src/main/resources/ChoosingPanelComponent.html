@@ -1,24 +1,41 @@
 <div class="container">
-    <form>
+    <form #choosingPanel="ngForm">
+        <label for="name">Imię</label>
         <div class="form-group">
-            <input type="text" class="form-control" id="name" required>
+            <input type="text" class="form-control" id="name" [(ngModel)]="form.name" name="name" required>
         </div>
+        <label for="surname">Nazwisko</label>
         <div class="form-group">
-            <input type="text" class="form-control" id="surname" required>
+            <input type="text" class="form-control" id="surname" [(ngModel)]="form.surname" name="surname" required>
         </div>
+        <label for="subject1">Kurs 1</label>
         <div class="form-group">
-            <select class="form-control" id="subject1" required>
-            <option *ngFor="let course of filterOnId(this.subjectsForm.controls['subject3'].value, this.subjectsForm.controls['subject2'].value)" [value]="course.Id">{{course.Name}}</option>
+            <select class="form-control" id="subject1" [(ngModel)]="form.course1" name="course1" required>
+                <ng-container *ngFor="let course of courses">
+                    <ng-container *ngIf="course.id != form.course2 && course.id != form.course3">
+                        <option [value]="course.id">{{course.name}}</option>
+                    </ng-container>
+                </ng-container>
             </select>
         </div>
+        <label for="subject2">Kurs 2</label>
         <div class="form-group">
-            <select class="form-control" id="subject1" required>
-            <option *ngFor="let course of filterOnId(this.subjectsForm.controls['subject3'].value, this.subjectsForm.controls['subject2'].value)" [value]="course.Id">{{course.Name}}</option>
+            <select class="form-control" id="subject2" [(ngModel)]="form.course2" name="course2" required>
+                <ng-container *ngFor="let course of courses">
+                    <ng-container *ngIf="course.id != form.course1 && course.id != form.course3">
+                        <option [value]="course.id">{{course.name}}</option>
+                    </ng-container>
+                </ng-container>
             </select>
         </div>
+        <label for="subject3">Kurs 3</label>
         <div class="form-group">
-            <select class="form-control" id="subject1" required>
-            <option *ngFor="let course of filterOnId(this.subjectsForm.controls['subject3'].value, this.subjectsForm.controls['subject2'].value)" [value]="course.Id">{{course.Name}}</option>
+            <select class="form-control" id="subject3" [(ngModel)]="form.course3" name="course3" required>
+                <ng-container *ngFor="let course of courses">
+                    <ng-container *ngIf="course.id != form.course1 && course.id != form.course2">
+                        <option [value]="course.id">{{course.name}}</option>
+                    </ng-container>
+                </ng-container>
             </select>
         </div>
         <button type="submit" class="btn btn-success">Wyślij wyniki!</button>

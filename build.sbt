@@ -2,6 +2,7 @@ enablePlugins(ScalaJSPlugin)
 
 name := "front"
 scalaVersion := "2.11.12"
+scalacOptions += "-P:scalajs:sjsDefinedByDefault"
 
 enablePlugins(Angulate2Plugin, LiteServerPlugin)
 

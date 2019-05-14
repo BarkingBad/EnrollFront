@@ -1,9 +1,13 @@
-import angulate2.std._
-import angulate2.platformBrowser.BrowserModule
-import angulate2.router.{Routes, RouterModule}
-import angulate2.http.HttpModule
 import angulate2.forms.FormsModule
+import angulate2.http.HttpModule
+import angulate2.platformBrowser.BrowserModule
+import angulate2.router.RouterModule
+import angulate2.std._
+import components._
+import services._
+
 import scala.scalajs._
+
 
 
 
@@ -15,19 +19,17 @@ import scala.scalajs._
     ] :+
     RouterModule.forRoot(js.Array(
       Route(path = "panel", component = %%[ChoosingPanelComponent]),
-      Route(path = "auth", component = %%[AuthComponent]),
       Route(path = "dashboard", component = %%[DashboardComponent]),
-      // Route(path = "dashboard/:id", component = %%[DashboardDetailsComponent]),
-      Route(path = "", redirectTo = "/auth", pathMatch = "full")
+      Route(path = "dashboard/:id", component = %%[DashboardDetailComponent]),
+      Route(path = "", redirectTo = "/dashboard", pathMatch = "full")
     )),
   declarations = @@[
     AppComponent,
-    AuthComponent,
     ChoosingPanelComponent,
-    DashboardComponent
-    // DashboardDetailsComponent
+    DashboardComponent,
+    DashboardDetailComponent
   ],
-
+  providers = @@[HttpService],
   bootstrap = @@[AppComponent]
 )
 class AppModule {

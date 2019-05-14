@@ -1,23 +1,30 @@
+package components
+
 import angulate2.std._
+
 import scala.scalajs.js
-import angulate2.core.{ Component, OnInit }
-import angulate2.router.{ ActivatedRoute, Router }
+import angulate2.core.{Component, OnInit}
+import angulate2.router.{ActivatedRoute, Router}
+import models._
+import services._
 
 @Component(
   selector = "app-dashboard-details",
-  templateUrl = "./DashboardDetailComponent.html"
+  templateUrl = "./classes/DashboardDetailComponent.html"
 )
-class DashboardDetailsComponent(
-    val route: ActivatedRoute,
-    // val httpService: CoursesService,
-    val router: Router) extends OnInit {
+class DashboardDetailComponent(
+                                val route: ActivatedRoute,
+                                val httpService: HttpService,
+                                val router: Router) extends OnInit {
 
   val dashDetail: js.Array[DashDetail] = js.Array()
   val courses: js.Array[Course] = js.Array()
-  val id: Int = 0
-  val isDisabled = true
+  // @Input
+  // val form: Form = _
+  var isDisabled = true
 
-  override def ngOnInit() {
+  override def ngOnInit(): Unit = {
+    // route.params.switchMap((params, i) => httpService.getForm(params("id").toInt)).subscribe(this.form = _)
     // this.id = +this.route.snapshot.paramMap.get("id");
     // this.httpService.getDashDetailById(this.id).subscribe(
     //   n => this.subjectsForm = this.fb.group({
@@ -34,17 +41,13 @@ class DashboardDetailsComponent(
 
   }
 
-//   enable() {
-//     this.subjectsForm.get("name").enable();
-//     this.subjectsForm.get("surname").enable();
-//     this.isDisabled = false;
-//   }
+  def enable(): Unit = {
+    this.isDisabled = false
+  }
 
-//   disable() {
-//     this.subjectsForm.get("name").disable();
-//     this.subjectsForm.get("surname").disable();
-//     this.isDisabled = true;
-//   }
+  def disable(): Unit = {
+    this.isDisabled = true
+  }
 
 //   delete() {
 //     this.httpService.delete(this.id).subscribe(
@@ -77,10 +80,6 @@ class DashboardDetailsComponent(
 //       err => console.log(err),
 //       () => this.router.navigate(["dashboard"])
 //     );
-//   }
-
-//   filterOnId(id1, id2) {
-//     return this.courses == null ? [] : this.courses.filter(x => (x.Id !== id1 && x.Id !== id2));
 //   }
 
 

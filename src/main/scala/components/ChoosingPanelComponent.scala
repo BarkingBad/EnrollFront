@@ -1,36 +1,32 @@
+package components
+
 import angulate2.std._
+
 import scala.scalajs.js
-import angulate2.core.{ Component, OnInit, Input }
-// import { Student } from "../student";
-// import { FormBuilder, Validators } from "@angular/forms";
-// import { CoursesService } from "../courses.service";
-// import { Course } from "../course";
-// import { Form } from "../Form";
+import angulate2.core.OnInit
+import models._
+import services.HttpService
 import angulate2.router.Router
 
 @Component(
   selector = "app-choosing-panel",
   templateUrl = "./classes/ChoosingPanelComponent.html"
 )
-class ChoosingPanelComponent(router: Router) extends OnInit {
+class ChoosingPanelComponent(httpService: HttpService, router: Router) extends OnInit {
 
-  @Input
-  var index: String = _;
+  var courses: js.Array[Course] = _
 
-//   val courses: Course[];
+  // js.Array(
+  //   Course(1, "Assembler"),
+  //   Course(2, "C++"),
+  //   Course(3, "Erlang"),
+  //   Course(4, "Scala")
+  // )
 
-//   subjectsForm = this.fb.group({
-//     name: [""],
-//     surname: [""],
-//     subject1: [""],
-//     subject2: [""],
-//     subject3: [""]
-//   });
-
-//   constructor(private fb: FormBuilder, private coursesService: CoursesService, private router: Router) { }
-
+  val form = Form("", "", 0, 0, 0)
+  
   override def ngOnInit() {
-    // this.coursesService.getCourses().subscribe(c => this.courses = c.map(n => new Course(n.Id, n.Name)));
+    httpService.getCourses().map(this.courses = _)
   }
 
 //   onSubmitFinal() {
@@ -47,7 +43,4 @@ class ChoosingPanelComponent(router: Router) extends OnInit {
 //         );
 //   }
 
-//   filterOnId(id1, id2) {
-//     return this.courses == null ? [] : this.courses.filter(x => (x.Id !== id1 && x.Id !== id2));
-//   }
 }
