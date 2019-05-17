@@ -7,23 +7,24 @@ import angulate2.http._
 import models._
 import rxjs.RxPromise
 import rxjs._
+import upickle.default._
 
 @Injectable
 class HttpService(http: Http) {
-  val coursesUrl = "http://localhost:9000/courses/"
+  val coursesUrl = "http://localhost:9000/courses"
   val formsUrl = "http://localhost:9000/forms"
   val dashDetailsUrl = "http://localhost:9000/dashdetails"
 
   val httpOptions = RequestOptionsArgs(
     headers = new Headers(js.Dynamic.literal(
+      //"Access-Control-Allow-Origin" -> "*",
       "Content-Type" -> "application/json",
       "Accept" -> "my-auth-token")
     )
   )
 
-  def getCourses(): RxPromise[js.Array[Course]] = {
-
-    http.get(coursesUrl + "/all").toPromise.map(_.jsonData[js.Array[Course]])
+  def getCourses() = {
+    http.get(coursesUrl + "/all")
   }
 
   def getDashDetailById(id: Int): RxPromise[DashDetail] = {

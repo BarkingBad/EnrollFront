@@ -3,6 +3,7 @@ enablePlugins(ScalaJSPlugin)
 name := "front"
 scalaVersion := "2.11.12"
 scalacOptions += "-P:scalajs:sjsDefinedByDefault"
+libraryDependencies += "com.lihaoyi" %%% "upickle" % "0.7.1"
 
 enablePlugins(Angulate2Plugin, LiteServerPlugin)
 
