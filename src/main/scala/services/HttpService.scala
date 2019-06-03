@@ -17,7 +17,6 @@ class HttpService(http: Http) {
 
   val httpOptions = RequestOptionsArgs(
     headers = new Headers(js.Dynamic.literal(
-      //"Access-Control-Allow-Origin" -> "*",
       "Content-Type" -> "application/json",
       "Accept" -> "my-auth-token")
     )
@@ -25,6 +24,10 @@ class HttpService(http: Http) {
 
   def getCourses() = {
     http.get(coursesUrl + "/all")
+  }
+
+  def getDashDetails() = {
+    http.get(dashDetailsUrl + "/all")
   }
 
   def getDashDetailById(id: Int): RxPromise[DashDetail] = {
@@ -43,9 +46,9 @@ class HttpService(http: Http) {
     http.delete(formsUrl + "/" + s"$id").toPromise.map(_ => ())
   }
 
-  // def patch(id: Int, form: js.Any): Observable[js.Any] = {
-  //   http.patch(formsUrl + "/" + s"$id").toPromise
-  // }
+  def patch(id: Int, form: Form): RxPromise[Form] = {
+    http.putJson(formsUrl + "/" + s"$id").toPromise.map(_.jsonData[Form])
+  }
 
   private def handleError(error: js.Any) = js.Dynamic.global.console.log(error)
 }

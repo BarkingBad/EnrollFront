@@ -10,7 +10,7 @@ import models.DashDetail
   selector = "app-dashboard",
   templateUrl = "./classes/DashboardComponent.html"
 )
-class DashboardComponent(/*httpService: HttpService,*/ router: Router) extends OnInit {
+class DashboardComponent(httpService: HttpService, router: Router) extends OnInit {
 
 
   val forms = js.Array(
@@ -20,6 +20,6 @@ class DashboardComponent(/*httpService: HttpService,*/ router: Router) extends O
   val headElements = js.Array("Index", "Name", "Surname", "Course1", "Course2", "Course3")
 
   override def ngOnInit() {
-    // this.fetchData(10, 0, "Name", "asc");
+    // httpService.getDashDetails().subscribe((res: Response) => forms = js.JSON.parse(res.text()).asInstanceOf[js.Array[DashDetail]])
   }
 }
