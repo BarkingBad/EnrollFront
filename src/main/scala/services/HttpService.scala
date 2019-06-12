@@ -47,7 +47,7 @@ class HttpService(http: Http) {
   }
 
   def patch(id: Int, form: Form): RxPromise[Form] = {
-    http.putJson(formsUrl + "/" + s"$id").toPromise.map(_.jsonData[Form])
+    http.putJson(formsUrl + "/" + s"$id", form).toPromise.map(_.jsonData[Form])
   }
 
   private def handleError(error: js.Any) = js.Dynamic.global.console.log(error)

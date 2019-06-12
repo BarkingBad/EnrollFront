@@ -18,16 +18,17 @@ class ChoosingPanelComponent(httpService: HttpService, router: Router) extends O
 
   var courses: js.Array[Course] = _
   var response: Response = _
-
-  val form = Form("", "", 0, 0, 0)
+  
+  val form = Form(null, null, null, js.Array(0, 0, 0))
 
   override def ngOnInit(): Unit = {
+    courses = js.Array(Course(1, "A"), Course(2, "B"), Course(3, "C"), Course(4, "D"))
     httpService.getCourses().subscribe((res: Response) => courses = js.JSON.parse(res.text()).asInstanceOf[js.Array[Course]])
   }
 
 
-  onSubmitFinal() {
-    this.coursesService.postForm(form)
+  def submit() {
+    this.httpService.postForm(form)
     router.navigateTo("/dashboard")
   }
 

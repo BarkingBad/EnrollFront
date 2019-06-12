@@ -12,10 +12,9 @@
         </div>
         <label for="subject1">Kurs 1</label>
         <div class="form-group">
-            <select class="form-control" id="subject1" [(ngModel)]="form.course1" name="course1" [disabled]="isDisabled"
-                    required>
+            <select class="form-control" id="subject1" [(ngModel)]="form.courses[0]" name="course1" required>
                 <ng-container *ngFor="let course of courses">
-                    <ng-container *ngIf="course.id != form.course2 && course.id != form.course3">
+                    <ng-container *ngIf="course.id != form.courses[1] && course.id != form.courses[2]">
                         <option [value]="course.id">{{course.name}}</option>
                     </ng-container>
                 </ng-container>
@@ -23,10 +22,9 @@
         </div>
         <label for="subject2">Kurs 2</label>
         <div class="form-group">
-            <select class="form-control" id="subject2" [(ngModel)]="form.course2" name="course2" [disabled]="isDisabled"
-                    required>
+            <select class="form-control" id="subject2" [(ngModel)]="form.courses[1]" name="course2" required>
                 <ng-container *ngFor="let course of courses">
-                    <ng-container *ngIf="course.id != form.course1 && course.id != form.course3">
+                    <ng-container *ngIf="course.id != form.course[0] && course.id != form.courses[2]">
                         <option [value]="course.id">{{course.name}}</option>
                     </ng-container>
                 </ng-container>
@@ -34,10 +32,9 @@
         </div>
         <label for="subject3">Kurs 3</label>
         <div class="form-group">
-            <select class="form-control" id="subject3" [(ngModel)]="form.course3" name="course3" [disabled]="isDisabled"
-                    required>
+            <select class="form-control" id="subject3" [(ngModel)]="form.courses[2]" name="course3" required>
                 <ng-container *ngFor="let course of courses">
-                    <ng-container *ngIf="course.id != form.course1 && course.id != form.course2">
+                    <ng-container *ngIf="course.id != form.courses[0] && course.id != form.courses[1]">
                         <option [value]="course.id">{{course.name}}</option>
                     </ng-container>
                 </ng-container>
