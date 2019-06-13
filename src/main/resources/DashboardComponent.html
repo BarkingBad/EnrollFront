@@ -7,12 +7,12 @@
     </thead>
     <tbody>
     <tr *ngFor="let form of forms" [routerLink]="['/dashboard', form.id]" [id]="form.id">
-        <th scope="col">{{form.id}}</th>
-        <td>{{ form.name }}</td>
-        <td>{{ form.surname }}</td>
-        <td>{{ form.course1 }}</td>
-        <td>{{ form.course2 }}</td>
-        <td>{{ form.course3 }}</td>
+        <th scope="col">{{dashDetails.student.id}}</th>
+        <td>{{ dashDetails.student.firstName }}</td>
+        <td>{{ dashDetails.student.lastName }}</td>
+        <td>{{ dashDetails.courses[0] }}</td>
+        <td>{{ dashDetails.courses[1] }}</td>
+        <td>{{ dashDetails.courses[2] }}</td>
     </tr>
     </tbody>
 </table>

@@ -19,7 +19,7 @@ class DashboardDetailComponent(
   val router: Router) extends OnInit {
 
   @Input
-  var form: Form = _
+  var form: DashDetail = _
   val dashDetail: js.Array[DashDetail] = js.Array()
   var courses: js.Array[Course] = js.Array()
   
@@ -27,7 +27,7 @@ class DashboardDetailComponent(
 
   override def ngOnInit(): Unit = {
     route.params.switchMap((params, i) => httpService
-      .getFormById(params("id").toInt))
+      .getDashDetailById(params("id").toInt))
       .subscribe(this.form = _)
     httpService.getCourses().subscribe((res: Response) => courses = js.JSON.parse(res.text()).asInstanceOf[js.Array[Course]])
   }
@@ -40,14 +40,14 @@ class DashboardDetailComponent(
     this.isDisabled = true
   }
 
-  def delete() {
-    this.httpService.deleteForm(form.id.toInt)
-    router.navigateTo("/dashboard")
-  }
+  // def delete() {
+  //   this.httpService.deleteForm(form.student.id.toInt)
+  //   router.navigateTo("/dashboard")
+  // }
 
-  def update() {
-    this.httpService.patch(form.id.toInt, form)
-    router.navigateTo("/dashboard")
-  }
+  // def update() {
+  //   this.httpService.postForm(form)
+  //   router.navigateTo("/dashboard")
+  // }
 
 }

@@ -16,13 +16,10 @@ import services._
 class DashboardComponent(val httpService: HttpService, val router: Router) extends OnInit {
 
 
-  var forms = js.Array(
-    DashDetail(1, "Kacper", "Korban", "Scala", "Erlang", "Python"),
-    DashDetail(2, "Wojtek", "Dolata", "Assembler", "C++", "Ruby")
-  )
+  var dashDetails: js.Array[DashDetail] = _
   val headElements = js.Array("Index", "Name", "Surname", "Course1", "Course2", "Course3")
 
   override def ngOnInit() {
-    httpService.getDashDetails().subscribe((res: Response) => forms = js.JSON.parse(res.text()).asInstanceOf[js.Array[DashDetail]])
+    httpService.getDashDetails().subscribe((res: Response) => dashDetails = js.JSON.parse(res.text()).asInstanceOf[js.Array[DashDetail]], _ => println("ERR"), _ => println("SUCC"))
   }
 }

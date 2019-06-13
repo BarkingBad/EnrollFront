@@ -12,8 +12,7 @@ import upickle.default._
 @Injectable
 class HttpService(http: Http) {
   val coursesUrl = "http://localhost:9000/courses"
-  val formsUrl = "http://localhost:9000/forms"
-  val dashDetailsUrl = "http://localhost:9000/dashdetails"
+  val studentsUrl = "http://localhost:9000/students"
 
   val httpOptions = RequestOptionsArgs(
     headers = new Headers(js.Dynamic.literal(
@@ -27,27 +26,19 @@ class HttpService(http: Http) {
   }
 
   def getDashDetails() = {
-    http.get(dashDetailsUrl + "/all")
+    http.get(studentsUrl + "/allWithCourses")
   }
 
   def getDashDetailById(id: Int): RxPromise[DashDetail] = {
-    http.get(dashDetailsUrl + s"/$id").toPromise.map(_.jsonData[DashDetail])
+    http.get(studentsUrl + s"/forId/$id").toPromise.map(_.jsonData[DashDetail])
   }
 
   def postForm(form: Form): RxPromise[Form] = {
-    http.postJson(formsUrl, form).toPromise.map(_.jsonData[Form])
-  }
-
-  def getFormById(id: Int): RxPromise[Form] = {
-    http.get(formsUrl + s"/$id").toPromise.map(_.jsonData[Form])
+    http.postJson(studentsUrl + "/insertWithCourses", form).toPromise.map(_.jsonData[Form])
   }
 
   def deleteForm(id: Int): RxPromise[Unit] = {
-    http.delete(formsUrl + "/" + s"$id").toPromise.map(_ => ())
-  }
-
-  def patch(id: Int, form: Form): RxPromise[Form] = {
-    http.putJson(formsUrl + "/" + s"$id", form).toPromise.map(_.jsonData[Form])
+    http.delete(studentsUrl + "/" + s"$id").toPromise.map(_ => ())
   }
 
   private def handleError(error: js.Any) = js.Dynamic.global.console.log(error)
