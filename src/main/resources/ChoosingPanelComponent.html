@@ -2,15 +2,17 @@
     <form (ngSubmit)="submit()" #choosingPanel="ngForm">
         <label for="id">Indeks</label>
         <div class="form-group">
-            <input type="number" class="form-control" id="id" [(ngModel)]="form.id" name="id" required />
+            <input type="number" class="form-control" id="id" [(ngModel)]="form.student.id" name="id" required/>
         </div>
         <label for="name">Imię</label>
         <div class="form-group">
-            <input type="text" class="form-control" id="name" [(ngModel)]="form.name" name="name" required />
+            <input type="text" class="form-control" id="name" [(ngModel)]="form.student.firstName" name="name"
+                   required/>
         </div>
         <label for="surname">Nazwisko</label>
         <div class="form-group">
-            <input type="text" class="form-control" id="surname" [(ngModel)]="form.surname" name="surname" required />
+            <input type="text" class="form-control" id="surname" [(ngModel)]="form.student.lastName" name="surname"
+                   required/>
         </div>
         <label for="subject1">Kurs 1</label>
         <div class="form-group">

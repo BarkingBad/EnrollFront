@@ -6,13 +6,14 @@
     </tr>
     </thead>
     <tbody>
-    <tr *ngFor="let form of forms" [routerLink]="['/dashboard', form.id]" [id]="form.id">
-        <th scope="col">{{dashDetails.student.id}}</th>
-        <td>{{ dashDetails.student.firstName }}</td>
-        <td>{{ dashDetails.student.lastName }}</td>
-        <td>{{ dashDetails.courses[0] }}</td>
-        <td>{{ dashDetails.courses[1] }}</td>
-        <td>{{ dashDetails.courses[2] }}</td>
+    <tr *ngFor="let dashDetail of dashDetails" [routerLink]="['/dashboard', dashDetail.student.id]"
+        [id]="dashDetail.student.id">
+        <th scope="col">{{dashDetail.student.id}}</th>
+        <td>{{ dashDetail.student.firstName }}</td>
+        <td>{{ dashDetail.student.lastName }}</td>
+        <td>{{ dashDetail.courses[0] }}</td>
+        <td>{{ dashDetail.courses[1] }}</td>
+        <td>{{ dashDetail.courses[2] }}</td>
     </tr>
     </tbody>
 </table>

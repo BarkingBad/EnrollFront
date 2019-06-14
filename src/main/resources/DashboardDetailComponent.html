@@ -1,13 +1,13 @@
 <div class="container">
-    <form #choosingPanel="ngForm">
+    <form (ngSubmit)="update()" #choosingPanel="ngForm">
         <label for="name">Imię</label>
         <div class="form-group">
-            <input type="text" class="form-control" id="name" [(ngModel)]="form.name" name="name"
+            <input type="text" class="form-control" id="name" [(ngModel)]="form.student.firstName" name="name"
                    [disabled]="isDisabled" required>
         </div>
         <label for="surname">Nazwisko</label>
         <div class="form-group">
-            <input type="text" class="form-control" id="surname" [(ngModel)]="form.surname" name="surname"
+            <input type="text" class="form-control" id="surname" [(ngModel)]="form.student.lastName" name="surname"
                    [disabled]="isDisabled" required>
         </div>
         <label for="subject1">Kurs 1</label>
@@ -24,7 +24,7 @@
         <div class="form-group">
             <select class="form-control" id="subject2" [(ngModel)]="form.courses[1]" name="course2" required>
                 <ng-container *ngFor="let course of courses">
-                    <ng-container *ngIf="course.id != form.course[0] && course.id != form.courses[2]">
+                    <ng-container *ngIf="course.id != form.courses[0] && course.id != form.courses[2]">
                         <option [value]="course.id">{{course.name}}</option>
                     </ng-container>
                 </ng-container>

@@ -20,6 +20,6 @@ class DashboardComponent(val httpService: HttpService, val router: Router) exten
   val headElements = js.Array("Index", "Name", "Surname", "Course1", "Course2", "Course3")
 
   override def ngOnInit() {
-    httpService.getDashDetails().subscribe((res: Response) => dashDetails = js.JSON.parse(res.text()).asInstanceOf[js.Array[DashDetail]], _ => println("ERR"), _ => println("SUCC"))
+    httpService.getDashDetails().subscribe((res: Response) => dashDetails = js.JSON.parse(res.text()).asInstanceOf[js.Array[DashDetail]])
   }
 }

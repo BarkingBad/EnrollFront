@@ -14,11 +14,11 @@ class HttpService(http: Http) {
   val coursesUrl = "http://localhost:9000/courses"
   val studentsUrl = "http://localhost:9000/students"
 
+  val header = Headers()
+  header.append("Access-Control-Allow-Origin", "*")
+  header.append("Content-Type", "application/json")
   val httpOptions = RequestOptionsArgs(
-    headers = new Headers(js.Dynamic.literal(
-      "Content-Type" -> "application/json",
-      "Accept" -> "my-auth-token")
-    )
+    headers = header
   )
 
   def getCourses() = {
@@ -29,15 +29,15 @@ class HttpService(http: Http) {
     http.get(studentsUrl + "/allWithCourses")
   }
 
-  def getDashDetailById(id: Int): RxPromise[DashDetail] = {
-    http.get(studentsUrl + s"/forId/$id").toPromise.map(_.jsonData[DashDetail])
+  def getFormById(id: Int) = {
+    http.get(studentsUrl + s"/forId/$id")
   }
 
-  def postForm(form: Form): RxPromise[Form] = {
-    http.postJson(studentsUrl + "/insertWithCourses", form).toPromise.map(_.jsonData[Form])
+  def postForm(form: Form) = {
+    http.postJson(studentsUrl + "/insertWithCourses", form, httpOptions)
   }
 
-  def deleteForm(id: Int): RxPromise[Unit] = {
+  def deleteForm(id: Int) = {
     http.delete(studentsUrl + "/" + s"$id").toPromise.map(_ => ())
   }
 
