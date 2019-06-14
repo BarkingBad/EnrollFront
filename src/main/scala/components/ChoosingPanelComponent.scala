@@ -18,8 +18,8 @@ class ChoosingPanelComponent(httpService: HttpService, router: Router) extends O
 
   var courses: js.Array[Course] = _
   var response: Response = _
-  val student = Student(0, "", "")
-  val form = Form(student, js.Array(0, 0, 0))
+  val student = Student("", "", "")
+  val form = Form(student, js.Array("", "", ""))
 
   override def ngOnInit(): Unit = {
     httpService.getCourses().subscribe((res: Response) => courses = res.json().asInstanceOf[js.Array[Course]])

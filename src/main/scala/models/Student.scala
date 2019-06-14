@@ -5,4 +5,4 @@ import scala.scalajs.js
 import angulate2.ext.data._
 
 @Data
-case class Student(id: js.UndefOr[Int], firstName: String, lastName: String) extends js.Any
+case class Student(id: String, firstName: String, lastName: String) extends js.Any

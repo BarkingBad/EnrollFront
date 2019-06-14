@@ -17,8 +17,8 @@ class DashboardDetailComponent(
   val route: ActivatedRoute,
   val httpService: HttpService,
   val router: Router) extends OnInit {
-  var student = Student(0, "", "")
-  var form: Form = Form(student, js.Array(0, 0, 0))
+  var student = Student(" ", " ", " ")
+  var form: Form = Form(student, js.Array("", "", ""))
   var beforeEdited: Form = _
   var courses: js.Array[Course] = _
   
