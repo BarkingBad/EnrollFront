@@ -19,6 +19,7 @@ class DashboardDetailComponent(
   val router: Router) extends OnInit {
   var student = Student(0, "", "")
   var form: Form = Form(student, js.Array(0, 0, 0))
+  var beforeEdited: Form = _
   var courses: js.Array[Course] = _
   
   var isDisabled = true
@@ -26,18 +27,17 @@ class DashboardDetailComponent(
   override def ngOnInit(): Unit = {
     route.params.switchMap((params, i) => httpService
       .getFormById(params("id").toInt))
-      .subscribe((res: Response) => form = {
-        println(res.text());
-        js.JSON.parse(res.text()).asInstanceOf[Form]
-      })
-    httpService.getCourses().subscribe((res: Response) => courses = js.JSON.parse(res.text()).asInstanceOf[js.Array[Course]])
+      .subscribe((res: Response) => form = res.json().asInstanceOf[Form])
+    httpService.getCourses().subscribe((res: Response) => courses = res.json().asInstanceOf[js.Array[Course]])
   }
 
   def enable(): Unit = {
+    beforeEdited = form
     this.isDisabled = false
   }
 
   def disable(): Unit = {
+    form = beforeEdited
     this.isDisabled = true
   }
 

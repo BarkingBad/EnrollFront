@@ -22,7 +22,7 @@ class ChoosingPanelComponent(httpService: HttpService, router: Router) extends O
   val form = Form(student, js.Array(0, 0, 0))
 
   override def ngOnInit(): Unit = {
-    httpService.getCourses().subscribe((res: Response) => courses = js.JSON.parse(res.text()).asInstanceOf[js.Array[Course]])
+    httpService.getCourses().subscribe((res: Response) => courses = res.json().asInstanceOf[js.Array[Course]])
   }
 
 

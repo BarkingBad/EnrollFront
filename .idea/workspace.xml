@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0481dbfe-c3d3-4111-95bb-7ec48e2d640e" name="Default Changelist" comment="Resolved parsing problems">
-      <change beforePath="$PROJECT_DIR$/src/main/resources/ChoosingPanelComponent.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ChoosingPanelComponent.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/DashboardComponent.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/DashboardComponent.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/DashboardDetailComponent.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/DashboardDetailComponent.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/components/ChoosingPanelComponent.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/components/ChoosingPanelComponent.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/components/DashboardComponent.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/components/DashboardComponent.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/components/DashboardDetailComponent.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/components/DashboardDetailComponent.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/models/Form.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/models/Form.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/models/Student.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/models/Student.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/services/HttpService.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/services/HttpService.scala" afterDir="false" />
-    </list>
+    <list default="true" id="0481dbfe-c3d3-4111-95bb-7ec48e2d640e" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/project/project/target/" />
@@ -32,11 +22,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/services/HttpService.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="14" column="21" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="51" />
+            <state relative-caret-position="345">
+              <caret line="23" column="6" selection-start-line="23" selection-start-column="6" selection-end-line="23" selection-end-column="6" />
               <folding>
                 <element signature="e#18#40#0" expanded="true" />
               </folding>
@@ -47,8 +37,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/models/Form.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="72" lean-forward="true" selection-start-line="7" selection-start-column="72" selection-end-line="7" selection-end-column="72" />
+            <state relative-caret-position="75">
+              <caret line="7" column="72" selection-start-line="7" selection-start-column="72" selection-end-line="7" selection-end-column="72" />
               <folding>
                 <element signature="e#16#38#0" expanded="true" />
               </folding>
@@ -68,7 +58,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/models/Course.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
+            <state relative-caret-position="75">
               <caret line="8" column="55" selection-start-line="8" selection-start-column="55" selection-end-line="8" selection-end-column="55" />
               <folding>
                 <element signature="e#16#38#0" expanded="true" />
@@ -98,7 +88,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/components/ChoosingPanelComponent.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
+            <state relative-caret-position="195">
               <caret line="21" column="30" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
               <folding>
                 <element signature="e#20#42#0" expanded="true" />
@@ -116,11 +106,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/AppModule.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="34" column="17" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="17" />
+            <state relative-caret-position="390">
+              <caret line="26" column="17" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
               <folding>
                 <element signature="e#0#34#0" expanded="true" />
               </folding>
@@ -131,8 +121,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/components/DashboardDetailComponent.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="513">
-              <caret line="45" column="17" selection-start-line="45" selection-start-column="17" selection-end-line="45" selection-end-column="17" />
+            <state relative-caret-position="418">
+              <caret line="48" column="16" selection-start-line="48" selection-start-column="16" selection-end-line="48" selection-end-column="16" />
               <folding>
                 <element signature="e#20#42#0" expanded="true" />
               </folding>
@@ -164,10 +154,10 @@
         <option value="$PROJECT_DIR$/src/main/scala/models/Student.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/services/HttpService.scala" />
         <option value="$PROJECT_DIR$/src/main/resources/DashboardDetailComponent.html" />
-        <option value="$PROJECT_DIR$/src/main/scala/components/DashboardDetailComponent.scala" />
         <option value="$PROJECT_DIR$/src/main/resources/ChoosingPanelComponent.html" />
         <option value="$PROJECT_DIR$/src/main/scala/components/ChoosingPanelComponent.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/models/Form.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/components/DashboardDetailComponent.scala" />
       </list>
     </option>
   </component>
@@ -221,6 +211,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -281,7 +272,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -360,6 +350,7 @@
       <workItem from="1558037485709" duration="14399000" />
       <workItem from="1558075169692" duration="3388000" />
       <workItem from="1560456765806" duration="9242000" />
+      <workItem from="1560499375218" duration="115000" />
     </task>
     <task id="LOCAL-00001" summary="Added service, resolved some bugs">
       <created>1557848957919</created>
@@ -368,16 +359,23 @@
       <option name="project" value="LOCAL" />
       <updated>1557848957920</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Updated services">
+      <created>1560499479596</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1560499479596</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33828000" />
+    <option name="totallyTimeSpent" value="33943000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1680" y="-2" width="1680" height="1052" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20563036" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20807834" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -393,13 +391,13 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Build" order="7" weight="0.32936078" />
       <window_info anchor="bottom" id="sbt-shell-toolwindow" order="8" weight="0.32829374" />
-      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.22535211" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.22486487" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
       <window_info anchor="bottom" id="Version Control" order="13" weight="0.32719395" />
       <window_info anchor="bottom" id="SBT Console" order="14" weight="0.32936078" />
-      <window_info active="true" anchor="bottom" id="Messages" order="15" visible="true" weight="0.32829374" />
+      <window_info active="true" anchor="bottom" id="Messages" order="15" visible="true" weight="0.32827735" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -455,7 +453,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added service, resolved some bugs" />
     <MESSAGE value="Resolved parsing problems" />
-    <option name="LAST_COMMIT_MESSAGE" value="Resolved parsing problems" />
+    <MESSAGE value="Updated services" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated services" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="editorHistoryManager">
@@ -550,43 +549,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/components/AuthComponent.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/models/Form.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/components/ChoosingPanelComponent.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="30" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
+        <state relative-caret-position="75">
+          <caret line="7" column="72" selection-start-line="7" selection-start-column="72" selection-end-line="7" selection-end-column="72" />
           <folding>
-            <element signature="e#20#42#0" expanded="true" />
+            <element signature="e#16#38#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/components/DashboardComponent.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/models/Student.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="22" column="136" selection-start-line="22" selection-start-column="136" selection-end-line="22" selection-end-column="136" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/components/DashboardDetailComponent.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="45" column="17" selection-start-line="45" selection-start-column="17" selection-end-line="45" selection-end-column="17" />
-          <folding>
-            <element signature="e#20#42#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="75">
+          <caret line="7" column="33" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/models/Course.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
+        <state relative-caret-position="75">
           <caret line="8" column="55" selection-start-line="8" selection-start-column="55" selection-end-line="8" selection-end-column="55" />
           <folding>
             <element signature="e#16#38#0" expanded="true" />
@@ -601,39 +583,56 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/models/Form.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/components/AuthComponent.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
-          <caret line="7" column="72" lean-forward="true" selection-start-line="7" selection-start-column="72" selection-end-line="7" selection-end-column="72" />
+          <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/components/ChoosingPanelComponent.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="21" column="30" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
           <folding>
-            <element signature="e#16#38#0" expanded="true" />
+            <element signature="e#20#42#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/models/Student.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/components/DashboardComponent.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="7" column="33" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/services/HttpService.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="14" column="21" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="51" />
-          <folding>
-            <element signature="e#18#40#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="225">
+          <caret line="22" column="136" selection-start-line="22" selection-start-column="136" selection-end-line="22" selection-end-column="136" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/AppModule.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="34" column="17" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="17" />
+        <state relative-caret-position="390">
+          <caret line="26" column="17" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
           <folding>
             <element signature="e#0#34#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/components/DashboardDetailComponent.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="48" column="16" selection-start-line="48" selection-start-column="16" selection-end-line="48" selection-end-column="16" />
+          <folding>
+            <element signature="e#20#42#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/services/HttpService.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="6" selection-start-line="23" selection-start-column="6" selection-end-line="23" selection-end-column="6" />
+          <folding>
+            <element signature="e#18#40#0" expanded="true" />
           </folding>
         </state>
       </provider>
