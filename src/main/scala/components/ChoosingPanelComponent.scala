@@ -27,7 +27,7 @@ class ChoosingPanelComponent(httpService: HttpService, router: Router) extends O
 
 
   def submit() {
-    httpService.postForm(form).subscribe((res: Response) => _, (x: Any) => x, () => router.navigateTo("/dashboard"))
+    this.httpService.postForm(form).subscribe((res: Response) => _, (x: Any) => x, () => router.navigateTo("/dashboard"))
   }
 
 }

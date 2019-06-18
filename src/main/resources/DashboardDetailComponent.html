@@ -1,5 +1,5 @@
 <div class="container">
-    <form (ngSubmit)="update()" #choosingPanel="ngForm">
+    <form (ngSubmit)="submit()" #choosingPanel="ngForm">
         <label for="name">Imię</label>
         <div class="form-group">
             <input type="text" class="form-control" id="name" [(ngModel)]="form.student.firstName" name="name"
