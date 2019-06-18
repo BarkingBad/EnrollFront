@@ -1,5 +1,5 @@
 <div class="container">
-    <form (ngSubmit)="submit()" #choosingPanel="ngForm">
+    <form #choosingPanel="ngForm">
         <label for="name">Imię</label>
         <div class="form-group">
             <input type="text" class="form-control" id="name" [(ngModel)]="form.student.firstName" name="name"
@@ -40,7 +40,7 @@
                 </ng-container>
             </select>
         </div>
-        <button type="submit" class="btn btn-success" [disabled]="isDisabled">Wyślij wyniki!</button>
+        <button (click)="submit()" class="btn btn-success" [disabled]="isDisabled">Wyślij wyniki!</button>
     </form>
 
     <br>
