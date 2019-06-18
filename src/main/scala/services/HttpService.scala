@@ -38,7 +38,7 @@ class HttpService(http: Http) {
   }
 
   def deleteForm(id: Int) = {
-    http.delete(studentsUrl + "/" + s"$id").toPromise.map(_ => ())
+    http.delete(studentsUrl + s"/delete/$id", httpOptions)
   }
 
   private def handleError(error: js.Any) = js.Dynamic.global.console.log(error)

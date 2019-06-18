@@ -21,13 +21,14 @@ class DashboardDetailComponent(
   var c = js.Array[String]("", "", "")
   var form: Form = Form(student, c)
   var courses: js.Array[Course] = _
-  
+  var id: Int = _
   var isDisabled = true
 
   override def ngOnInit(): Unit = {
-
-    route.params.switchMap((params, i) => httpService
-      .getFormById(params("id").toInt))
+    route.params.switchMap((params, i) => {
+        id = params("id").toInt
+        httpService.getFormById(id)
+      })
       .subscribe((res: Response) => {
         form = res.json().asInstanceOf[Form]
       }
@@ -44,10 +45,9 @@ class DashboardDetailComponent(
     this.isDisabled = true
   }
 
-  // def delete() {
-  //   this.httpService.deleteForm(form.student.id.toInt)
-  //   router.navigateTo("/dashboard")
-  // }
+  def delete() {
+    this.httpService.deleteForm(id).subscribe((res: Response) => _, (x: Any) => x, () => router.navigateTo("/dashboard"))
+  }
 
   def submit() {
     form.courses(0) = "" + form.courses(0)
