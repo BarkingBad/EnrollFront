@@ -1,3 +1,5 @@
+Scala.js and Angulate project  
+
 target/scala-2.11$ npm install  
 $ sbt  
 \> fastOptJS::systemJS  
